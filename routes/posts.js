@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post.model')
+const cors = require('cors')
 
 const bodyParser = require('body-parser')
 // for express
+router.use(cors())
 router.use(bodyParser.json());
 
 // route for all post
